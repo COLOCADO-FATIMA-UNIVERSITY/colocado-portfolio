@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Bonheur+Royale&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Creepster&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="header.css">
+    <title>CLCD - PORTFOLIO</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+        }
+
+        p,
+        h1 {
+            color: white;
+            margin: 0;
+        }
+
+        .port-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            min-height: 87vh;
+            animation: fadeInUp 0.8s ease-in-out;
+            background-color: black;
+            padding: 20px;
+        }
+
+        .port-container h1 {
+            font-size: clamp(3.5rem, 5vw, 5rem);
+            color: #ffd700;
+            margin-top: 10px;
+        }
+
+
+        #port-body-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 2rem 1rem;
+            background-color: #242424;
+            animation: fadeInUp 0.5s ease-in-out;
+            color: white;
+        }
+
+        #port-greet {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        #port-greet h1 {
+            margin: 0;
+        }
+
+        #port-greet h1:first-child {
+            font-size: 1.2rem;
+        }
+
+        #port-greet h1:last-child {
+            font-size: 2.5rem;
+        }
+
+        .port-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            width: 100%;
+            max-width: 1200px;
+            margin-bottom: 2rem;
+            padding: 0 1rem;
+        }
+
+        .univ-gallery {
+            background-color: #1a1a1a;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            padding-bottom: 1rem;
+        }
+
+        .univ-gallery:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .pic1 {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .img1 {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .pic1:hover .img1 {
+            transform: scale(1.05);
+        }
+
+        .univ-gallery h1 {
+            margin: 0.8rem 1rem 0.5rem;
+            color: #0b84ff;
+            font-size: 1.2rem;
+        }
+
+        .univ-gallery p {
+            margin: 0 1rem;
+            font-size: 0.95rem;
+            color: #ccc;
+        }
+
+        #port-lll {
+            margin-top: 1rem;
+        }
+
+        #p-butt2 {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.25rem;
+            background-color: #ffd700;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        #p-butt2:hover {
+            background-color: #ffcc00;
+            transform: scale(1.05);
+        }
+
+        #port-greet {
+            width: 100%;
+            margin: 30px auto 0;
+            text-align: start;
+            height: 120px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: black;
+            padding: 20px;
+            width: 100%;
+            animation: fadeInUp 0.5s ease-in-out;
+        }
+
+        .bck-2-top {
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1rem;
+            background-color: #181818;
+            border-radius: 10px;
+            box-shadow: 1px 1px 20px #ffcc00;
+            color: white;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .bck-2-top:hover {
+            transform: scale(1.05);
+            box-shadow: 1px 1px 50px black;
+        }
+
+        @media (max-width: 768px) {
+            .bck-2-top {
+                width: 100%;
+                justify-content: center;
+                padding: 0.5rem 1rem;
+            }
+
+            .bck-2-top p {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container-head">
+            <div id="logo">
+                <img src="images/1743587926241.jpg" alt="logo">
+            </div>
+            <div id="container-navigation">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">ABOUT</a></li>
+                        <li><a href="#"
+                                style="text-decoration: underline; font-weight: bolder; color: #ffd700;">PORTFOLIO</a>
+                        </li>
+                        <li><a href="experience.html">EXPERIENCES</a></li>
+                        <li><a href="experience.html#una">CONTACTS</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="port-container">
+        <p>Through My Lens, Through My</p>
+        <h1>PORTFOLIO</h1>
+    </div>
+
+    <div id="port-body-container">
+        <div id="port-greet">
+            <h1><span style="color: #ffcc00;">FINEST WORK</span></h1>
+            <h1>HIGHLIGHTS</h1>
+        </div>
+
+        <div class="port-gallery">
+            <a href="https://sites.google.com/view/educ-maft/home">
+                <div class="univ-gallery">
+                    <div class="pic1">
+                        <img class="img1" src="https://lh3.googleusercontent.com/d/1zw5t2T2adj2L50BAl_319LK0thV-dG49"
+                            alt="G-SERVER ERROR">
+                    </div>
+                    <h1>PHYSICS FAIR - 2024</h1>
+                    <p>Awarded <span style="color: yellow;">FIRST PLACE</span> at the 2024 STEM Physics Fair for
+                        developing an advanced technological prototype designed to support the development of future
+                        smart cities. - Tap the banner to <span style="color: #0b84ff;">LEARN MORE</span></p>
+                </div>
+            </a>
+            <a href="https://sites.google.com/view/clcdproductions/home?authuser=0">
+                <div class="univ-gallery">
+                    <div class="pic1">
+                        <img class="img1" src="https://lh3.googleusercontent.com/d/1p3RVx0ACg-Gb5E5R08O45dSb1D6PJGj6"
+                            alt="G-SERVER ERROR">
+                    </div>
+                    <h1>MASTERY in PHOTOGRAPHY & FILMING</h1>
+                    <p>This work highlights my mastery in photography and film, blending visual storytelling with
+                        technical precision. <br> - Tap the banner to <span style="color: #0b84ff;">LEARN
+                            MORE<br></span></p>
+                </div>
+            </a>
+            <!-- Repeat .univ-gallery as needed -->
+        </div>
+
+        <div id="port-greet">
+            <h1><span style="color: #ffd700;">TOP-TIER</span> OF MY</h1>
+            <h1>ASTRO-GRAPHY</h1>
+        </div>
+
+        <div class="port-gallery">
+            <a href="https://lh3.googleusercontent.com/d/1lWZwB3uh9J-MIHUdIA4zp-hRxC256XiK">
+                <div class="univ-gallery">
+                    <div class="pic1">
+                        <img class="img1" src="https://lh3.googleusercontent.com/d/1lWZwB3uh9J-MIHUdIA4zp-hRxC256XiK"
+                            alt="G-SERVER ERROR">
+                    </div>
+                    <h1>AFTER-DARK VISUALS</h1>
+                    <p>Harnessing the expressive power of low-light photography to capture emotion, contrast, and the
+                        quiet drama of the night.</p>
+                </div>
+            </a>
+            <a href="https://lh3.googleusercontent.com/d/1QghBHt14Y80Yvbl2F9dZ2y3Q8_ndoWrs">
+                <div class="univ-gallery">
+                    <div class="pic1">
+                        <img class="img1" src="https://lh3.googleusercontent.com/d/1QghBHt14Y80Yvbl2F9dZ2y3Q8_ndoWrs"
+                            alt="G-SERVER ERROR">
+                    </div>
+                    <h1>PLAY WITH SHUTTER SPEED</h1>
+                    <p>Mastering shutter speed to control motion blur and light exposure in both photography and film.
+                    </p>
+                </div>
+            </a>
+            <a href="https://lh3.googleusercontent.com/d/1b-HtjQ2PbXMjYcIipUO8plvRjlmpQ4cN">
+                <div class="univ-gallery">
+                    <div class="pic1">
+                        <img class="img1" src="https://lh3.googleusercontent.com/d/1b-HtjQ2PbXMjYcIipUO8plvRjlmpQ4cN"
+                            alt="G-SERVER ERROR">
+                    </div>
+                    <h1>THE MOON</h1>
+                    <p>Still, distant, quietly powerful — captured in high contrast, delicate tones, revealing hidden
+                        beauty and serene atmosphere.</p>
+                </div>
+            </a>
+            <a href="https://lh3.googleusercontent.com/d/1KUEPtEAcXwhCoANA0deJgY_lIOtE9Qxy">
+                <div class="univ-gallery">
+                    <div class="pic1">
+                        <img class="img1" src="https://lh3.googleusercontent.com/d/1KUEPtEAcXwhCoANA0deJgY_lIOtE9Qxy"
+                            alt="G-SERVER ERROR">
+                    </div>
+                    <h1>MOONLIT PEAK</h1>
+                    <p>Combining astrophotography principles and artistic framing to emphasize the moon’s beauty in
+                        diverse, atmospheric conditions.</p>
+                </div>
+            </a>
+
+
+
+
+            <!-- Repeat .univ-gallery as needed -->
+        </div>
+
+        <div id="port-greet">
+            <h1><span style="color: #ffd700;">TOP-TIER</span> OF MY</h1>
+            <h1>PORTRAITS</h1>
+        </div>
+
+        <div class="port-gallery">
+            <a href="https://lh3.googleusercontent.com/d/1tJ0sw9-0_MFW_eAXlC07V4Q2Vy2WSxxe">
+                <div class="univ-gallery">
+                    <div class="pic1">
+                        <img class="img1" src="https://lh3.googleusercontent.com/d/1tJ0sw9-0_MFW_eAXlC07V4Q2Vy2WSxxe"
+                            alt="G-SERVER ERROR">
+                    </div>
+                    <h1>PLAYGROUND, RAIN</h1>
+                    <p>A quiet playground soaked in rain, empty and peaceful, capturing a still moment before fun begins
+                        again.</p>
+                </div>
+            </a>
+            <a href="https://lh3.googleusercontent.com/d/1JeKviBbe1HhOdOPKXCWNYBLNjK26Of-x">
+                <div class="univ-gallery">
+                    <div class="pic1">
+                        <img class="img1" src="https://lh3.googleusercontent.com/d/1JeKviBbe1HhOdOPKXCWNYBLNjK26Of-x"
+                            alt="G-SERVER ERROR">
+                    </div>
+                    <h1>ARCADE DELIGHT</h1>
+                    <p>Brightly lit claw machines filled with plush toys, inviting players to try their luck and win
+                        prizes and more.</p>
+                </div>
+            </a>
+            <a href="https://lh3.googleusercontent.com/d/1ZzQei0hFXQHP6Ii79RfLIScEYQedsXop">
+                <div class="univ-gallery">
+                    <div class="pic1">
+                        <img class="img1" src="https://lh3.googleusercontent.com/d/1ZzQei0hFXQHP6Ii79RfLIScEYQedsXop"
+                            alt="G-SERVER ERROR">
+                    </div>
+                    <h1>ASIM HAHA</h1>
+                    <p>A confident young man in a vibrant yellow shirt poses effortlessly, reflecting modern fashion and
+                        bold charisma.</p>
+                </div>
+            </a>
+            <a href="https://lh3.googleusercontent.com/d/1skqdLcHE3zugmch3cuwKJb-mifL-rht-">
+                <div class="univ-gallery">
+                    <div class="pic1">
+                        <img class="img1" src="https://lh3.googleusercontent.com/d/1skqdLcHE3zugmch3cuwKJb-mifL-rht-"
+                            alt="G-SERVER ERROR">
+                    </div>
+                    <h1>ASIM DIN</h1>
+                    <p>A young woman stands in natural light, expressing grace and strength with her hand gently
+                        touching her face.</p>
+                </div>
+            </a>
+
+
+
+
+            <!-- Repeat .univ-gallery as needed -->
+        </div>
+
+        <div id="port-greet">
+            <h1><span style="color: #ffd700;">TOP-TIER</span> OF MY</h1>
+            <h1>FILMING SKILLS</h1>
+        </div>
+        <div class="port-gallery">
+            <a href="https://drive.google.com/file/d/1T8NR_pemdd9c0rfRRXNIKE1RQyc3l82-/view?usp=sharing">
+                <div class="univ-gallery">
+                    <div class="pic1">
+                        <img class="img1" src="https://lh3.googleusercontent.com/d/1U9o2SAp4Gik9oH1k9mnxVYO2TTWLOM0a"
+                            alt="G-SERVER ERROR">
+                    </div>
+                    <h1>SEX EDUCATION</h1>
+                    <p>A short advertisement, directed by Jhyzel Valles with the help of <span
+                            style="color: #ffcc00;">CLCD POST PRODUCTIONS</span> in 2024, promotes awareness, consent,
+                        safety, and responsibility.<br><span style="color: #0b84ff;">*TAP THE BANNER TO PLAY</span></p>
+                </div>
+            </a>
+            <a href="https://drive.google.com/file/d/1bM8kuBLpvdKkPAmXTOu7Cc254wHdF20Q/view?usp=sharing">
+                <div class="univ-gallery">
+                    <div class="pic1">
+                        <img class="img1" src="https://lh3.googleusercontent.com/d/1NYsApMhLkYKeiC8G-rd2Cy6aCeuF4l72"
+                            alt="G-SERVER ERROR">
+                    </div>
+                    <h1>PCAS SHORT FILM</h1>
+                    <p>PCAS is a short comedy film directed by Angelo Colocado and managed by<br> <span
+                            style="color: #ffcc00;">CLCD POST PRODUCTIONS</span>.<br><br><span
+                            style="color: #0b84ff;">*TAP THE BANNER TO PLAY</span></p>
+                </div>
+            </a>
+            <a href="https://drive.google.com/file/d/1b9Z46YLaqAXBWsa1KjJOtY7CP2tLDS6g/view?usp=sharing">
+                <div class="univ-gallery">
+                    <div class="pic1">
+                        <img class="img1" src="https://lh3.googleusercontent.com/d/12XU-ta5ocYNNwEgm3bOX5oLEjxf1QtM-"
+                            alt="G-SERVER ERROR">
+                    </div>
+                    <h1>SMV-SALAMIN BINI</h1>
+                    <p>A short music video directed by Shane Nicole, with post-production semi-enhanced by<br> <span
+                            style="color: #ffcc00;">CLCD POST PRODUCTIONS</span>.<br><br><span
+                            style="color: #0b84ff;">*TAP THE BANNER TO PLAY</span></p>
+                </div>
+            </a>
+            <a href="404.html">
+                <div class="univ-gallery">
+                    <div class="pic1">
+                        <img class="img1" src="https://lh3.googleusercontent.com/d/1kVxhT7_cN4a7e0OVxA1hr4TComsa4y2l"
+                            alt="G-SERVER ERROR">
+                    </div>
+                    <h1>STAY TUNED FOR MORE!</h1>
+                    <p>Project not yet available for public release.<br><br><br><span style="color: #0b84ff;">STAY TUNED
+                            FOR MORE UPDATES!</span></p>
+                </div>
+            </a>
+
+
+
+            <!-- Repeat .univ-gallery as needed -->
+        </div>
+        <!--<div id="port-lll">
+      <a href="portfolio.html">
+        <div id="p-butt2">
+          <img src="images/icons/output-onlinegiftools.gif" width="35px" alt="ICON TO TOP" style="transform: rotate(90deg);" />
+          <p><span style="font-weight: 700; color: black;">BACK TO HOME</span></p>
+        </div>
+      </a>
+    </div>-->
+
+        <a href="#logo">
+            <div class="bck-2-top">
+                <img src="https://lh3.googleusercontent.com/d/1J_D60kFUmxtv73JzQmSWLJNfSgkWgTyn" width="35"
+                    alt="G-SERVER ERROR">
+                <p><span style="color: white;">SCROLL TO TOP</span></p>
+            </div>
+        </a>
+    </div>
+
+
+    <footer>
+        <p>ALL RIGHTS RESERVED 2025</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="header.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Bonheur+Royale&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Creepster&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <title>CLCD - ABOUT</title>
+  <style>
+    .oContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 87vh;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      text-align: center;
+      animation: fadeInUp 0.5s ease-in-out;
+    }
+
+    .oContainer {
+      background-image: url('https://lh3.googleusercontent.com/d/1ivcoUUMpucKB5HGXN7mAktLBuIjJ_Wvp');
+    }
+
+    #greet h1 {
+      font-size: 3rem;
+      font-weight: 400;
+      transition: 0.5s;
+    }
+
+    #greet {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60%;
+      height: 10%;
+      margin-top: 170px;
+      margin-bottom: 100px;
+      color: black;
+
+      animation: fadeInUp 0.5s ease-in-out;
+    }
+
+    .scroll {
+      margin-top: 2rem;
+      text-align: center;
+      transition: 0.1s;
+    }
+
+    .scroll:hover {
+      transform: scale(1.5);
+    }
+
+    .tContainer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      background-image: url('https://lh3.googleusercontent.com/d/1XuWZbDxmHdR_ZfAty6SeCZKlrkJY0st3');
+      background-size: cover;
+      background-position: center;
+      padding: 2rem;
+      gap: 2rem;
+      height: auto;
+      transition: 0.5s;
+      animation: fadeInUp 0.5s ease-in-out;
+    }
+
+    #picture img {
+      width: 100%;
+      height: auto;
+      max-width: 500px;
+      object-fit: contain;
+      transition: 0.5s;
+    }
+
+    #t-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      flex: 1 1 300px;
+      max-width: 48%;
+    }
+
+    @media (max-width: 768px) {
+      #picture img {
+        width: 100%;
+        max-width: 80%;
+      }
+
+      #t-content {
+        max-width: 100%;/
+      }
+    }
+
+    #picture {
+      width: 50;
+    }
+
+    #t-content h1 {
+      font-size: 3rem;
+      font-weight: 400;
+      margin-top: 2rem;
+      transition: 0.5s;
+    }
+
+    #t-content p {
+      font-size: 0.85rem;
+      margin-top: 1rem;
+      transition: 0.5s;
+    }
+
+    #t-butt {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+      transition: 0.5s;
+    }
+
+    #t-butt1,
+    #t-butt2 {
+      padding: 0.75rem 1.25rem;
+      background-color: black;
+      border-radius: 8px;
+      box-shadow: 1px 1px 20px black;
+      color: white;
+      font-weight: 700;
+      transition: 0.2s;
+      transition: 0.5s;
+    }
+
+    #t-butt1:hover,
+    #t-butt2:hover {
+      transform: scale(1.05);
+      box-shadow: 1px 1px 50px black;
+      cursor: pointer;
+      transition: 0.5s;
+    }
+
+    .thContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 5rem 0.5rem;
+      animation: fadeInUp 0.5s ease-in-out;
+    }
+
+    #abt {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    #abt p {
+      font-size: 1.75rem;
+      font-weight: bold;
+      transition: 0.5s;
+    }
+
+    #hhh1 {
+      flex: 1;
+      width: 100%;
+      border: 1.6px solid black;
+    }
+
+    #abt-txt {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      text-align: justify;
+      transition: 0.5s;
+    }
+
+    #abt-txt p {
+      font-size: clamp(0.5rem, 3vw, 1.5rem);
+      font-weight: 400;
+      color: black;
+      transition: 0.5s;
+    }
+
+    .bck-2-top {
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1rem;
+      background-color: #181818;
+      border-radius: 10px;
+      box-shadow: 1px 1px 20px black;
+      color: white;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .bck-2-top:hover {
+      transform: scale(1.05);
+      box-shadow: 1px 1px 50px black;
+    }
+
+    footer {
+      text-align: center;
+      background-color: black;
+      padding: 15px;
+      border-top: white 1px solid;
+      animation: fadeInUp 0.5s ease-in-out;
+      margin-top: auto;
+      width: 100;
+    }
+
+    @media (max-width: 1024px) {
+
+      .greet h1,
+      #t-content h1 {
+        font-size: 2.25rem;
+      }
+
+      .t-butt {
+        justify-content: center;
+      }
+
+      #t-butt {
+        flex-direction: column;
+      }
+
+      #abt p {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .tContainer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .btn {
+        width: 250px;
+        font-size: 10px;
+        text-align: center;
+      }
+
+      .bck-2-top {
+        width: 100%;
+        justify-content: center;
+        padding: 0.5rem 1rem;
+      }
+
+      .bck-2-top p {
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .greet h1,
+      #t-content h1 {
+        font-size: 1.75rem;
+      }
+
+      #abt p {
+        font-size: 1.25rem;
+      }
+    }
+
+
+    .education-section {
+      background: url('https://lh3.googleusercontent.com/d/1XuWZbDxmHdR_ZfAty6SeCZKlrkJY0st3') no-repeat center;
+      background-size: cover;
+      padding: 5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      transition: 0.5s;
+    }
+
+    .edu-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      text-align: center;
+      color: black;
+    }
+
+    .edu-header .line {
+      flex: 1;
+      height: 2px;
+      background-color: black;
+    }
+
+    .edu-header p {
+      font-size: 1.75rem;
+      font-weight: bold;
+    }
+
+    .edu-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      width: 100%;
+      max-width: 800px;
+      position: relative;
+    }
+
+    .edu-entry {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      background-color: rgba(255, 255, 255, 0.88);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+      border-left: 6px solid green;
+      animation: slideIn 1s ease;
+      transition: 0.3s;
+    }
+
+    .edu-entry:hover {
+      transform: translateY(-5px);
+      box-shadow: 1px 1px 30px black;
+    }
+
+    .edu-logo img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      border-radius: 50%;
+      box-shadow: 0 0 10px black;
+    }
+
+    .edu-details h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+      color: black;
+    }
+
+    .edu-details .school {
+      font-size: 1rem;
+      font-style: italic;
+      color: #333;
+    }
+
+    .edu-details .year {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .edu-entry {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .edu-logo img {
+        width: 50px;
+        height: 50px;
+      }
+
+      .edu-header p {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header-1">
+    <div class="container-head">
+      <div id="logo">
+        <img src="images/Untitled design.png" alt="logo">
+      </div>
+      <div id="container-navigation">
+        <nav>
+          <ul>
+            <li><a href="#home"><span
+                  style="text-decoration: underline; font-weight: bolder; color: #ffd700;">ABOUT</span></a></li>
+            <li><a href="more-portfolio.html">PORTFOLIO</a></li>
+            <li><a href="experience.html">EXPERIENCES</a></li>
+            <li><a href="experience.html#una">CONTACTS</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="oContainer">
+    <div id="greet">
+      <h1 style="font-size: clamp(2.5rem, 3vw, 5rem);">Hey there, I’m <span class="span-bold">Angelo!</span></h1>
+    </div>
+    <div id="scroll">
+      <a href="#home">
+        <img src="https://lh3.googleusercontent.com/d/1AOHlnkQ1uIRfHTPhQdy0YZ3-ctYIl32J" width="30"
+          alt="G-SERVER ERROR">
+        <p style="font-size: 0.7rem;">SCROLL DOWN</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="tContainer" id="home">
+    <div id="picture">
+      <img src="https://lh3.googleusercontent.com/d/1wEiSIfjwaEj70x05HfuZa6w14fVKyAa_" alt="G-SERVER ERROR">
+    </div>
+    <div id="t-content">
+      <h1>Hey there, I’m <span class="span-bold">Angelo!</span></h1>
+      <p>BEING <span class="span-bold">VIDEO-EDITOR</span> | BEING A <span class="span-bold">BACK-END DEVELOPER</span>
+      </p>
+      <div id="t-butt">
+        <a href="#abt">
+          <div id="t-butt1" class="btn">LEARN MORE</div>
+        </a>
+        <a href="https://drive.google.com/drive/folders/1WeibxTcQdMpyk6mzxqJ3Kt39HaSTZTNj?usp=sharing">
+          <div id="t-butt2" class="btn secondary">DOWNLOAD CV</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="thContainer">
+    <div id="abt">
+      <div id="hhh1"></div>
+      <p style="font-weight: 400;">ABOUT <span class="span-bold">ME</span></p>
+      <div id="hhh1"></div>
+    </div>
+    <div id="abt-txt">
+      <p>I am Angelo Rioveros Colocado, an 18-year-old student currently pursuing a Bachelor of Science in Technology at
+        Our Lady of Fatima University. Despite my young age, I am deeply passionate about programming and video editing.
+        I have always been fascinated by the endless possibilities that technology offers, and I am committed to
+        expanding my knowledge and honing my skills in these fields.</p>
+      <p>My dedication to programming drives me to explore various technologies, coding languages, and innovative
+        solutions to real-world challenges. I enjoy the problem-solving aspect of coding and take pride in developing
+        efficient and creative solutions. Additionally, my passion for video editing allows me to combine technical
+        skills with artistic expression, bringing ideas to life through engaging and visually appealing content.</p>
+      <p>I am eager to take on new challenges, collaborate with like-minded individuals, and contribute my skills to
+        meaningful projects. As I continue my academic journey, I am excited about the opportunities ahead and remain
+        committed to personal and professional growth in the fields of programming and video editing.</p>
+    </div>
+  </section>
+
+
+  <section class="education-section" id="education">
+    <div class="edu-header">
+      <div id="hhh1"></div>
+      <p>EDUCATION</p>
+      <div id="hhh1"></div>
+    </div>
+
+    <div class="edu-timeline">
+      <!-- SHS Entry -->
+      <div class="edu-entry">
+        <div class="edu-logo">
+          <img src="https://lh3.googleusercontent.com/d/1_rO3eya0ulXkrvHmxX9uUVRHr7650Rmy" alt="OLFU Logo">
+        </div>
+        <div class="edu-details">
+          <h3>Senior High School – STEM</h3>
+          <p class="school" style="color: green;">Our Lady of Fatima University</p>
+          <p class="year">2022 – 2024</p>
+        </div>
+      </div>
+
+      <!-- College Entry -->
+      <div class="edu-entry">
+        <div class="edu-logo">
+          <img src="https://lh3.googleusercontent.com/d/1_rO3eya0ulXkrvHmxX9uUVRHr7650Rmy" alt="OLFU Logo">
+        </div>
+        <div class="edu-details">
+          <h3>BS in Information Technology</h3>
+          <p class="school" style="color: green;">Our Lady of Fatima University</p>
+          <p class="year">2024 – Present</p>
+        </div>
+      </div>
+    </div>
+
+    <a href="#logo">
+      <div class="bck-2-top">
+        <img src="https://lh3.googleusercontent.com/d/1J_D60kFUmxtv73JzQmSWLJNfSgkWgTyn" width="35"
+          alt="G-SERVER ERROR">
+        <p><span style="color: white;">SCROLL TO TOP</span></p>
+      </div>
+    </a>
+  </section>
+
+
+  <footer>
+    <p style="color: white;">ALL RIGHTS RESERVED 2025</p>
+  </footer>
+</body>
+
+</html>

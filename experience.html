@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Bonheur+Royale&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Creepster&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="header.css">
+    <title>CLCD - EXPERIENCES</title>
+</head>
+
+<body>
+
+    <style>
+        .eContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 87vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-align: center;
+            animation: fadeInUp 0.5s ease-in-out;
+        }
+
+
+        .eContainer {
+            background-image: url('https://lh3.googleusercontent.com/d/1WqOP9DAJXJ-XAGnzuUlbrfG5idxLmxi8');
+        }
+
+        #greet h1 {
+            font-size: 3rem;
+            font-weight: 400;
+        }
+
+        #greet {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60%;
+            height: 10%;
+            margin-top: 170px;
+            margin-bottom: 100px;
+            color: black;
+
+            animation: fadeInUp 0.5s ease-in-out;
+        }
+
+        .scroll {
+            margin-top: 2rem;
+            text-align: center;
+            transition: 0.1s;
+        }
+
+        .scroll:hover {
+            transform: scale(1.5);
+        }
+
+
+        /* CONTENT */
+
+        .eContainer-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: auto;
+            background-color: #ffff;
+            padding: 20px;
+            animation: fadeInUp 0.5s ease-in-out;
+        }
+
+        #e-greet {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 200px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        #cards-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-top: 20px;
+            gap: 20px;
+            /* optional spacing between images */
+        }
+
+        .banner-img {
+            width: 40%;
+            max-width: 100%;
+            height: auto;
+            transition: 0.5s;
+        }
+
+        .banner-img:hover {
+            transform: scale(1.05);
+        }
+
+        #t-butt1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 130px;
+            height: 40px;
+            font-weight: 700;
+            margin-top: 30px;
+
+            background-color: black;
+            border-radius: 8px;
+            box-shadow: 1px 1px 20px black;
+            transition: 0.2s;
+        }
+
+        #t-butt1:hover {
+            scale: 1.05;
+            box-shadow: 1px 1px 50px black;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .banner-img {
+                width: 80%;
+            }
+
+        }
+
+
+
+        .container-contacts {
+            width: 100%;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            background-color: #f7f7f7;
+            animation: fadeInUp 0.5s ease-in-out;
+        }
+
+        #cont-contacts {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        .contact-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: space-between;
+            transition: 0.5s;
+        }
+
+        .contact-card {
+            flex: 1 1 48%;
+            display: flex;
+            gap: 1rem;
+            padding: 1.5rem;
+            background-color: #eaeaea;
+            border: 1.5px solid #000;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+            background-color: #ffffff;
+        }
+
+        .img-icon {
+            min-width: 70px;
+            max-width: 70px;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .img-icon img {
+            width: 80%;
+            height: auto;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            flex: 1;
+            transition: 0.5s;
+        }
+
+        .title p {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #111;
+        }
+
+        .desc p {
+            font-size: 1rem;
+            color: #333;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .action a {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0b84ff;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .action a:hover {
+            color: #005ecc;
+            text-decoration: underline;
+        }
+
+        .contact-other {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .section-title p {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #111;
+        }
+
+        /* Scroll to top */
+        .bck-2-top {
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1rem;
+            background-color: #181818;
+            border-radius: 10px;
+            box-shadow: 1px 1px 20px black;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            max-width: fit-content;
+        }
+
+        .bck-2-top img {
+            width: 35px;
+            height: auto;
+        }
+
+        .bck-2-top:hover {
+            transform: scale(1.05);
+            box-shadow: 1px 1px 50px black;
+        }
+
+        /* ===== Responsive Media Queries ===== */
+        @media (max-width: 992px) {
+            .contact-card {
+                flex: 1 1 100%;
+            }
+
+            .img-icon {
+                min-width: 60px;
+                height: 60px;
+            }
+
+            .title p {
+                font-size: 1.1rem;
+            }
+
+            .desc p,
+            .action a {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container-contacts {
+                padding: 1rem;
+            }
+
+            #cards-container img {
+                width: 100%;
+            }
+
+            .img-icon {
+                min-width: 50px;
+                height: 50px;
+            }
+
+            .contact-info {
+                gap: 0.5rem;
+            }
+
+            .bck-2-top {
+                padding: 0.5rem 0.75rem;
+                font-size: 0.9rem;
+            }
+
+            .bck-2-top img {
+                width: 25px;
+            }
+        }
+
+
+        /* ===== Icon Hover Animation ===== */
+        .img-icon img {
+            transition: transform 0.3s ease;
+        }
+
+        .img-icon:hover img {
+            transform: scale(1.1) rotate(3deg);
+        }
+
+
+        footer {
+            text-align: center;
+            background-color: black;
+            padding: 20px;
+            width: 100%;
+            animation: fadeInUp 0.5s ease-in-out;
+        }
+    </style>
+
+    <header>
+        <div class="container-head">
+            <div id="logo">
+                <img src="images/1743587926241.jpg" alt="logo">
+            </div>
+            <div id="container-navigation">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">ABOUT</a></li>
+                        <li><a href="more-portfolio.html">PORTFOLIO</a></li>
+                        <li><a href="experience.html"><span
+                                    style="text-decoration: underline; font-weight: bolder; color: #ffd700;">EXPERIENCES</span></a>
+                        </li>
+                        <li><a href="experience.html#una">CONTACTS</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="eContainer">
+        <div id="greet">
+            <h1 id="top" style="color: black; font-weight: 400; font-size: clamp(1.5rem, 3vw, 5rem);"><span
+                    style="font-weight: 700;">EXPERIENCES</span> & <span
+                    style="font-weight: 700; color: #38502c;">TESTIMONIALS</span></h1>
+        </div>
+        <div id="scroll" style="transition: 0.1s;">
+            <img src="https://lh3.googleusercontent.com/d/1AOHlnkQ1uIRfHTPhQdy0YZ3-ctYIl32J" width="30px" alt="SCROLL UP ICON">
+            <p style="font-size: 10px;">SCROLL DOWN</p>
+        </div>
+    </div>
+
+    <div class="eContainer-body">
+        <div id="e-greet">
+            <h1 style="color: black; font-weight: 400; font-size: clamp(2rem, 5vw, 3.5rem);">What <span
+                    style="font-weight: 700; color: #38502c;">people</span><br>say about <span
+                    style="font-weight: 700; color: #38502c;">me</span></h1>
+        </div>
+        <div id="cards-container">
+            <img src="https://lh3.googleusercontent.com/d/1WucmBndb5hYLifZfZ0RduJIccsVN_XcO" alt="G-SERVER ERROR"
+                class="banner-img">
+            <img src="https://lh3.googleusercontent.com/d/1zQuq5oPP7B-ci5FXYiCStpmOixCou4WT" alt="G-SERVER ERROR"
+                class="banner-img">
+        </div>
+
+        <div id="e-greet">
+            <h1 style="color: black; font-weight: 400; font-size: clamp(2rem, 5vw, 3.5rem);">I'm eager to</h1>
+            <h1 style="color: black; font-weight: 400; font-size: clamp(2rem, 5vw, 3.5rem)">share my <span
+                    style="font-weight: bold;">insights</span></h1>
+            <h1 style="color: black; font-weight: 400; font-size: clamp(2rem, 5vw, 3.5rem)">and <span
+                    style="font-weight: bold;">experiences</span></h1>
+        </div>
+        <div id="cards-container">
+            <img src="https://lh3.googleusercontent.com/d/1Mnq-TVxSNw59XgkR_XkVlhUCjeae9LVv" alt="G-SERVER ERROR"
+                class="banner-img">
+            <img src="https://lh3.googleusercontent.com/d/1ofGdrUf5zDZBhYNNvPpD5ukDpeG7l818" alt="G-SERVER ERROR"
+                class="banner-img">
+        </div>
+        <a href="portfolio.html">
+            <div id="t-butt1">
+                <p style="font-size: 12px; color: white;">VIEW AWARDS</p>
+            </div>
+        </a>
+    </div>
+
+    <div id="una">
+        <h1 style="color: black; font-weight: 400; font-size: clamp(1.5rem, 3vw, 3.5rem); margin-left: 4%;">GET IN TOUCH
+            WITH <span style="font-weight: bold;">ME</span></h1>
+    </div>
+
+
+    <div class="container-contacts">
+        <div id="cont-contacts">
+
+            <!-- First Row: Online Chat & Contact Number -->
+            <div class="contact-row">
+                <div class="contact-card hover-card">
+                    <div class="img-icon">
+                        <img src="https://lh3.googleusercontent.com/d/1F3_rO9fMMlZlQkMGXXxyMEM3bXnias8a"
+                            alt="G-SERVER ERROR">
+                    </div>
+                    <div class="contact-info">
+                        <div class="title">
+                            <p>ONLINE CHAT</p>
+                        </div>
+                        <div class="desc">
+                            <p>Typically responds within an hour.</p>
+                        </div>
+                        <div class="action">
+                            <a href="https://www.facebook.com/angelocolocado.rioveros">Chat now ></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-card hover-card">
+                    <div class="img-icon">
+                        <img src="https://lh3.googleusercontent.com/d/1uLJ1l1G8Etf7E8SKz2IeYclMyB9WUBG6"
+                            alt="Phone Icon">
+                    </div>
+                    <div class="contact-info">
+                        <div class="title">
+                            <p>CONTACT NUMBER</p>
+                        </div>
+                        <div class="desc">
+                            <p>Typically responds instantly. Monday to Friday 10:00 AM to 10:00 PM</p>
+                        </div>
+                        <div class="action">
+                            <a href="tel:09682336273">09682336273 SMART</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Row: Other Contacts -->
+            <div class="contact-other">
+                <div class="section-title">
+                    <p>OTHER CONTACTS</p>
+                </div>
+                <div class="contact-card hover-card">
+                    <div class="img-icon">
+                        <img src="https://lh3.googleusercontent.com/d/1UkHQrtnCKCZOVLSFHWmqlJmV71ydhfjF"
+                            alt="Email Icon">
+                    </div>
+                    <div class="contact-info">
+                        <div class="title">
+                            <p>EMAIL</p>
+                        </div>
+                        <div class="desc">
+                            <p>Typically responds within a day. Monday to Friday 10:00 AM to 10:00 PM</p>
+                        </div>
+                        <div class="action">
+                            <a href="mailto:angelocolocado289@gmail.com">Email now ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll to Top -->
+            <a href="#logo">
+                <div class="bck-2-top">
+                    <img src="https://lh3.googleusercontent.com/d/1J_D60kFUmxtv73JzQmSWLJNfSgkWgTyn" alt="Top Icon">
+                    <p style="color: white;">SCROLL TO TOP</p>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+
+
+
+    <footer>
+        <p style="color: white;">ALL RIGHTS RESERVED</p>
+    </footer>
+
+
+
+
+</body>
+
+</html>

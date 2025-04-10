@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Bonheur+Royale&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Creepster&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="header.css">
+    <title>CLCD - PORTFOLIO</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+        }
+
+        p,
+        h1 {
+            color: white;
+            margin: 0;
+        }
+
+        .port-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            min-height: 87vh;
+            animation: fadeInUp 0.8s ease-in-out;
+            background-color: black;
+            padding: 20px;
+        }
+
+        .port-container h1 {
+            font-size: clamp(3.5rem, 5vw, 5rem);
+            color: #ffd700;
+            margin-top: 10px;
+        }
+
+        #port-greet {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin: 30px auto 0;
+            text-align: start;
+            height: 200px;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        #port-body-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            background-color: #242424;
+            padding: 40px 20px;
+        }
+
+        #port-gal {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 40px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            transition: 0.5s;
+        }
+
+        .gal0 {
+            flex: 1 1 300px;
+            max-width: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: start;
+            transition: 0.5s;
+        }
+
+        .pic0 {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 1px 1px 30px black;
+            transition: 0.3s;
+        }
+
+        .pic0:hover {
+            transform: scale(1.05);
+            box-shadow: 1px 1px 30px #ffd700;
+
+        }
+
+        .img0,
+        .img1 {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        #line {
+            margin-bottom: 100px;
+            height: 400px;
+            border: white solid 1px;
+        }
+
+        #port-lll {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            width: 100%;
+        }
+
+        #p-butt1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 700;
+            background-color: #ffd700;
+            color: black;
+            border-radius: 10px;
+            box-shadow: 1px 1px 10px rgba(255, 215, 0, 0.5);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        #p-butt1:hover {
+            transform: scale(1.08);
+            box-shadow: 1px 1px 15px #ffd700;
+        }
+
+        footer {
+            text-align: center;
+            background-color: black;
+            padding: 20px;
+            width: 100%;
+            animation: fadeInUp 0.5s ease-in-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+            #port-gal {
+                gap: 30px;
+            }
+
+            .gal0 {
+                max-width: 300px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .port-container {
+                height: auto;
+                padding: 40px 10px;
+            }
+
+            #line,
+            #line1 {
+                display: none;
+                /* Hides the line for smaller screens */
+            }
+
+            #port-greet {
+                margin: 0 auto 30px;
+            }
+
+            #port-gal {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+            }
+
+            .gal0 {
+                width: 90%;
+                max-width: 100%;
+            }
+
+            .pic0 {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .port-container h1 {
+                font-size: 2.5rem;
+            }
+
+            #p-butt1 {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+        }
+
+
+        #line1 {
+            width: 0%;
+            height: 100px;
+            border: white solid 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container-head">
+            <div id="logo">
+                <img src="images/1743587926241.jpg" alt="logo">
+            </div>
+            <div id="container-navigation">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">ABOUT</a></li>
+                        <li><a href="portfolio.html"
+                                style="text-decoration: underline; font-weight: bolder; color: #ffd700;">PORTFOLIO</a>
+                        </li>
+                        <li><a href="experience.html">EXPERIENCES</a></li>
+                        <li><a href="experience.html#una">CONTACTS</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="port-container">
+        <p>A GLIMPSE OF MY</p>
+        <h1>PORTFOLIO</h1>
+    </div>
+
+
+    <div id="port-body-container">
+        <div id="port-greet">
+            <div style="width: 100%;">
+                <h1 style="font-size: 20px;">A GLIMPSE OF MY</h1>
+                <h1 style="font-size: clamp(3rem, 5vw, 4rem);">PORTFOLIO</h1>
+            </div>
+        </div>
+
+
+        <div id="port-gal">
+            <div class="gal0">
+                <a href="https://sites.google.com/view/educ-maft/home">
+                    <div class="pic0">
+                        <img class="img0" src="https://lh3.googleusercontent.com/d/1zw5t2T2adj2L50BAl_319LK0thV-dG49"
+                            alt="Physics Fair Image">
+                    </div>
+
+                    <h1 style="color: #0b84ff; margin-top: 10px;">PHYSICS FAIR (PROGRAMMING)</h1>
+                    <p>1st Runner up MAFT Prototype. <br><br>*click the image to view details.</p>
+                </a>
+            </div>
+
+
+            <div id="line"></div>
+
+            <div class="gal0">
+                <a href="https://sites.google.com/view/educ-maft/home">
+                    <div class="pic0">
+                        <img class="img0" src="https://lh3.googleusercontent.com/d/1yqKMwlIhUYGNIGPVE2UlbNmtMppgdtqJ"
+                            alt="Physics Fair Image">
+                    </div>
+
+                    <h1 style="color: #0b84ff; margin-top: 10px;">VIDEO EDITING <br> (COMPOSITION)</h1>
+                    <p>Experienced video editor with<br>expertise across various categories.</p>
+                </a>
+            </div>
+        </div>
+
+        <div id="port-lll">
+            <a href="more-portfolio.html" id="p-butt1">
+                VIEW MORE
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>ALL RIGHTS RESERVED 2025</p>
+    </footer>
+</body>
+
+</html>

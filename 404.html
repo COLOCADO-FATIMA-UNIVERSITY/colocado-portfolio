@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Page Not Found</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0e0e0e, #1a1a1a);
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            text-align: center;
+            animation: fadeIn 1s ease forwards;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: clamp(5rem, 15vw, 12rem);
+            color: #ffd700;
+            animation: float 3s ease-in-out infinite;
+            font-weight: 700;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+            color: #ccc;
+            animation: fadeIn 1.5s ease forwards;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background-color: #ffd700;
+            color: #000;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+            transition: all 0.3s ease;
+            animation: fadeIn 2s ease forwards;
+        }
+
+        a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 1);
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            p {
+                font-size: 1.2rem;
+            }
+
+            a {
+                padding: 10px 20px;
+            }
+        }
+
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #fff;
+            animation: twinkle 2s infinite ease-in-out;
+            border-radius: 50%;
+        }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: 0.2;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="stars" id="stars"></div>
+
+    <div class="container">
+        <h1>E-404</h1>
+        <p>Oops! The page you're looking for doesn't exist/yet.</p>
+        <a href="index.html">Back to Home</a>
+    </div>
+
+    <script>
+        const starsContainer = document.getElementById("stars");
+        const numStars = 100;
+
+        for (let i = 0; i < numStars; i++) {
+            const star = document.createElement("div");
+            star.classList.add("star");
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.animationDelay = `${Math.random() * 2}s`;
+            starsContainer.appendChild(star);
+        }
+    </script>
+
+</body>
+
+</html>
